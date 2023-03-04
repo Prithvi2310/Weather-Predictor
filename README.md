@@ -2,7 +2,7 @@
 
 ## Brief Overview
 
-</p> A Weather Predictor is a  Machine Learning model is a type of algorithm that uses historical weather data and other related factors to predict future weather conditions. </p>
+A Weather Predictor is a  Machine Learning model is a type of algorithm that uses historical weather data and other related factors to predict future weather conditions.
 There are many different types of machine learning models that can be used for weather prediction, including neural networks, decision trees, and regression models. In this project we will be using Time Series Forecating Methedology.
 
 ## Key Insights
@@ -15,7 +15,8 @@ There are many different types of machine learning models that can be used for w
 Once the model has been trained, it can be used to make predictions about future weather conditions based on current weather data. These predictions can be used by meteorologists, emergency responders, and other professionals to plan for and respond to weather events.
 
 ## Contributors
-Contributions are what make the open source community such an amazing place to learn, inspire, and create. The contributors to this project are<br>
+Contributions make the open source community such an amazing place to learn, inspire, and create.
+The contributors to this project are <br>
 <a href = "https://github.com/Prithvi2310/Weather-Predictor/contributors">
   <img src = "https://contrib.rocks/image?repo=Prithvi2310/Weather-Predictor"/>
 </a>
