@@ -10,7 +10,6 @@ jobs:
   Weather-Predictor:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
     - uses: Prithvi2310/Weather-Predictor@main
       with:
         CONTRIBUTOR: '### Contributors'
