@@ -2,7 +2,7 @@
 
 ## 📃 Brief Overview
 
-A Weather Predictor is a  Machine Learning model is a type of algorithm that uses historical weather data and other related factors to predict future weather conditions.
+A Weather Predictor is a  Machine Learning model is a type of algorithm that uses historical weather datas and other related factors to predict future weather conditions.
 There are many different types of machine learning models that can be used for weather prediction, including neural networks, decision trees, and regression models. In this project we will be using Time Series Forecating Methedology.
 
 ## 💡 Key Insights
