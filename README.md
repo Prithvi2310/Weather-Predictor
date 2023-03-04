@@ -17,6 +17,7 @@ Once the model has been trained, it can be used to make predictions about future
 ## 🫂 Contributors
 Contributions make the open source community such an amazing place to learn, inspire, and create.
 The contributors to this project are <br>
+<a href="https://avatars.githubusercontent.com/u/103898139?v=4">
 
 ## 🪪 License
 
