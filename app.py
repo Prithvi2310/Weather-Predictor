@@ -3,16 +3,21 @@ import requests
 from datetime import datetime, timedelta
 import pandas as pd
 from streamlit_lottie import st_lottie
+import toml
 
-api_key = 'f101202d0d81e93cb1245ad877f53f4a'
+with open("secrets.toml", 'r') as f:
+    secrets = toml.load(f)
+
+api_key = secrets["openweathermap"]["api_key"]
+
+st.set_page_config(layout="wide")
+
 url = 'http://api.openweathermap.org/data/2.5/weather?q={}&appid={}'
-url_2 = 'http://api.openweathermap.org/data/3.0/history/timemachine?lat={}&lon={}&dt={}&appid={}'
+# url_2 = 'https://api.openweathermap.org/data/2.5/onecall/timemachine'
+# url_3 = 'https://api.openweathermap.org/geo/1.0/direct'
 
-def load_lottieurl(url):
-    r = requests.get(url)
-    if r.status_code !=200:
-        return None
-    return r.json()
+gif_file = open("C:/Users/annar/Downloads/Untitled design.gif", "rb").read()
+
 
 
 def getweather(city):
@@ -36,25 +41,25 @@ def getweather(city):
         print("Error in Search!")
 
 
-def get_hist_data(lat, lon, start):
-    res = requests.get(url_2.format(lat,lon,start,api_key))
-    data = res.json()
-    temp = []
-    for hour in data["hourly"]:
-        t = hour["temp"]
-        temp.append(t)
-    return data, temp
+
+    
+def local_css(file_name):
+    with open(file_name) as f:
+        st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html = True)
+
 
 #web app
+
+st.write("##")
 
 with st.container():
     col_1,col_2 = st.columns(2)
     with col_1:
         st.title("Weather Predictor Application")
-        st.write('An application that fetches current weather data from an API and analyses the historical data (of past 5 days)')
+        st.write('An application that fetches current weather data from openweathermap.org API and gives the user the current temperature, the feels like temperaure and humidity of the user input city!')
     with col_2:
-        lottie_weather = load_lottieurl("https://assets5.lottiefiles.com/packages/lf20_cHA3rG.json")
-        st_lottie(lottie_weather, height = 250, key = "weather")
+        st.image(gif_file)
+
 
 with st.container():
     col1, col2 = st.columns(2)
@@ -75,25 +80,19 @@ with st.container():
             st.info('Humidity: ' + str(round(r[3],2)) + ' %')
 
 with st.container():
-    #Number_of_Days = st.number_input("Enter the number of days you want the data of")
-    if city_name:
-        r, json = getweather(city_name)
-        #show_hist = st.expander(label = f'Last {Number_of_Days} Days History')
-        show_hist = st.expander(label = 'Last 5 Days History')
-        with show_hist:
-            start_date_string = st.date_input('Current Date')
-            date_df = []
-            max_temp_df =[]
-            for i in range (5):
-                date_str = start_date_string - timedelta(i)
-                start_date = datetime.strptime(str(date_str), "%Y-%m-%d")
-                timestamp_1 = datetime.timestamp(start_date)
-                data, temp = get_hist_data(r[5], r[4], int(timestamp_1))
-                date_df.append(date_str)
-                max_temp_df.append(max(temp) - 273)
+        
+    st.write("---")
+    st.header("Get in Touch With US")
 
-            df = pd.DataFrame()
-            df['Date'] = date_df
-            df['Max_temp'] = max_temp_df  
-            st.table(df)          
-                
+    with st.form(key="contact_form"):
+        # Add input fields for the user's name, email address, and message
+        name = st.text_input("Name")
+        email = st.text_input("Email")
+        message = st.text_area("Message")
+
+        # Add a submit button to the form
+        submit_button = st.form_submit_button(label="Submit")
+
+        if submit_button:
+            st.write("Your Response has been recorded. We will get back to you shortly")
+            
