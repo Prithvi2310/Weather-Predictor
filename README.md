@@ -16,7 +16,7 @@ A simple web application to get current weather of the city which is input by th
 ## 💯 Outcomes
 Once the model has been trained, it can be used to make predictions about future weather conditions based on current weather data. These predictions can be used by meteorologists, emergency responders, and other professionals to plan for and respond to weather events.<br>
 Follow this url to visit our web app:
-<a href = 'https://prithvi2310-weather-predictor-app-3sudp2.streamlit.app'>CLICK ME</a>
+<a href = 'https://prithvi2310-weather-predictor-app-3sudp2.streamlit.app'>https://prithvi2310-weather-predictor-app-3sudp2.streamlit.app</a>
 
 ## 📈 Timeline 
 - This project was initiated with a blank repository on 04/03/2023
