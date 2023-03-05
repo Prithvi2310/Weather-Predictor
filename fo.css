@@ -1,0 +1,68 @@
+$line-width: 8px;
+$line-color: rgba(255,255,255,1);
+
+body {
+  height: 100vh;
+  width: 100vw;
+  background-color: black;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.box {
+  height: 200px;
+  width: 300px;
+  position: relative;
+}
+.box__line {
+  position: absolute;
+  background: $line-color;
+  &--top,
+  &--bottom {
+    height: $line-width;
+    width: 100%;
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      width: $line-width;
+      height: $line-width;
+      background: $line-color;
+    }
+  }
+  &--top {
+    top: -$line-width;
+    &::before {
+      left: 0;
+      bottom: -$line-width;      
+    }
+    &::after {
+      right: 0;
+      bottom: -$line-width;
+    }
+  }
+  &--bottom {
+    bottom: -$line-width;
+    &::before {
+      left: 0;
+      top: -$line-width;      
+    }
+    &::after {
+      right: 0;
+      top: -$line-width;
+    }
+  }
+  &--left,
+  &--right {
+    width: $line-width;
+    height: 100%;
+  }
+  &--left {
+    left: -$line-width;
+  }
+  &--right {
+    right: -$line-width;
+  }
+}
