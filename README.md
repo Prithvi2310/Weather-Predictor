@@ -1,7 +1,7 @@
 # Weather-Predictor
-<!--![image](https://user-images.githubusercontent.com/98630036/222955363-ed3c2a5d-5421-416e-95b5-17a7abc210cd.gif)-->
+<p align="center">
 <img src="https://user-images.githubusercontent.com/98630036/222955363-ed3c2a5d-5421-416e-95b5-17a7abc210cd.gif" width="378" height="284">
-
+</p>
 
 ## 📃 Brief Overview
 
