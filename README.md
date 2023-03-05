@@ -1,4 +1,4 @@
-# Weather-Predictor
+# Weather Predictor
 <p align="center">
 <img src="https://user-images.githubusercontent.com/98630036/222955363-ed3c2a5d-5421-416e-95b5-17a7abc210cd.gif" width="378" height="284">
 </p>
@@ -17,17 +17,20 @@ A simple web application to get current weather of the city which is input by th
 Once the model has been trained, it can be used to make predictions about future weather conditions based on current weather data. These predictions can be used by meteorologists, emergency responders, and other professionals to plan for and respond to weather events.
 
 ## 📈 Timeline 
-- This project was initiated with a blank repository on 04/03/2023. 
-- A simple working web app was created by the afternoon of 05/03/2023 with the functionality of fetching the live weather data of the particular city.
-- 
+- This project was initiated with a blank repository on 04/03/2023
+- By the end of 04/03/2023 we had small web app running and an idea to implement LSTM with it
+- In the morning of 05/03/2023 we had a LSTM model using keras library but we couldn't integrate it with the web app
+- The model is fully functional with an accuracy of 80%
+- A simple working web app was created by the afternoon of 05/03/2023 with the functionality of fetching the live weather data of the particular city
 
 ## 🥳 What worked 
  - The app was able to fetch data, more or less, accurately
- - The UI was built successfully using the streamlit package.
+ - The UI was built successfully using the streamlit package
 
 ## 😢 What didn't work
-- The dataset was ready, the model was trained but its integration with the streamlit package failed and the desired product could not be completed.
-- 
+- We couldn't find an API that could help us fetch historical weather data
+- We decided to get an appropriate dataset (csv file) for our model but it wasn't publically available either
+- We manually designed the sample.csv and the model was trained but its integration with the streamlit package failed and the desired product could not be completed
 
 ## 🫂 Contributors
 Contributions make the open source community such an amazing place to learn, inspire, and create.
