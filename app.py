@@ -2,7 +2,6 @@ import streamlit as st
 import requests
 from datetime import datetime, timedelta
 import pandas as pd
-from streamlit_lottie import st_lottie
 import toml
 
 with open("secrets.toml", 'r') as f:
