@@ -17,7 +17,9 @@ Once the model has been trained, it can be used to make predictions about future
 ## 🫂 Contributors
 Contributions make the open source community such an amazing place to learn, inspire, and create.
 The contributors to this project are <br></br>
-@all-contributors please add @muntazir99 for 😎
+<a href="https://github.com/Prithvi2310/Weather-Predictor/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=Prithvi2310/Weather-Predictor" />
+</a>
 <a href="https://avatars.githubusercontent.com/u/103898139?v=4">
 
 ## 🪪 License
