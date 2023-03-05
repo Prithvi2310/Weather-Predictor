@@ -10,7 +10,7 @@ st.set_page_config(layout="wide")
 
 url = 'http://api.openweathermap.org/data/2.5/weather?q={}&appid={}'
 
-gif_file = open("C:/Users/annar/Downloads/Untitled design.gif", "rb").read()
+gif_file = open("design.gif", "rb").read()
 
 
 
