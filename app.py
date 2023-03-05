@@ -2,18 +2,13 @@ import streamlit as st
 import requests
 from datetime import datetime, timedelta
 import pandas as pd
-import toml
 
-with open("secrets.toml", 'r') as f:
-    secrets = toml.load(f)
 
-api_key = secrets["openweathermap"]["api_key"]
+api_key = 'f101202d0d81e93cb1245ad877f53f4a'
 
 st.set_page_config(layout="wide")
 
 url = 'http://api.openweathermap.org/data/2.5/weather?q={}&appid={}'
-# url_2 = 'https://api.openweathermap.org/data/2.5/onecall/timemachine'
-# url_3 = 'https://api.openweathermap.org/geo/1.0/direct'
 
 gif_file = open("C:/Users/annar/Downloads/Untitled design.gif", "rb").read()
 
@@ -55,11 +50,23 @@ with st.container():
     col_1,col_2 = st.columns(2)
     with col_1:
         st.title("Weather Predictor Application")
-        st.write('An application that fetches current weather data from openweathermap.org API and gives the user the current temperature, the feels like temperaure and humidity of the user input city!')
+        st.markdown("<h7 style='text-align: left; color: white;'>🔵 An application that fetches current weather data from openweathermap.org API</h1>", unsafe_allow_html=True)
+        st.markdown("<h7 style='text-align: left; color: white;'>🟢 Gives the user the current temperature, the feels like temperaure and humidity of the user input city!", unsafe_allow_html=True)
+        st.markdown("<h7 style='text-align: left; color: white;'>🟣 On further analysis, this application can help us forecast the future weather data</h1>", unsafe_allow_html=True)
+    
+        st.subheader("General Instructions " )
+        st.write("1. User must input a valid city name, i.e, there shouldn't be any grammatical error")
+        st.write("2. The city name is no case sensetive")
+        st.write("3. The accuracy of the information predicted in not 100%")
+
+        st. write('##')
+
+        st.markdown("<h10 style='text-align: left; color: red;'>NOTE: Since there are APIs that come under FOSS the future forecasting can be done through the integration of Machine Learning model</h1>", unsafe_allow_html=True)
+
     with col_2:
         st.image(gif_file)
 
-
+st.write('##')
 with st.container():
     col1, col2 = st.columns(2)
     with col1:
@@ -94,4 +101,3 @@ with st.container():
 
         if submit_button:
             st.write("Your Response has been recorded. We will get back to you shortly")
-            
