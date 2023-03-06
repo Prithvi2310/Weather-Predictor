@@ -55,8 +55,8 @@ with st.container():
         st.markdown("<h7 style='text-align: left; color: white;'>🟣 On further analysis, this application can help us forecast the future weather data</h1>", unsafe_allow_html=True)
     
         st.subheader("General Instructions " )
-        st.write("1. User must input a valid city name, i.e, there shouldn't be any grammatical error")
-        st.write("2. The city name is no case sensetive")
+        st.write("1. User must input a valid city name, i.e, there shouldn't be any spelling mistakes")
+        st.write("2. The city name is not case sensetive")
         st.write("3. The accuracy of the information predicted in not 100%")
 
         st. write('##')
