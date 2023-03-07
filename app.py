@@ -2,7 +2,7 @@ import streamlit as st
 import requests
 from datetime import datetime, timedelta
 import pandas as pd
-
+from streamlit_lottie import st_lottie
 
 api_key = 'f101202d0d81e93cb1245ad877f53f4a'
 
@@ -42,6 +42,15 @@ def getweather(city):
 def local_css(file_name):
     with open(file_name) as f:
         st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html = True)
+
+def load_lottieurl(url):
+    r = requests.get(url)
+    if r.status_code !=200:
+        return None
+    return r.json()
+
+
+lottie_mail = load_lottieurl("https://assets9.lottiefiles.com/packages/lf20_se3w0ukg.json")
 
 
 #web app
@@ -87,23 +96,28 @@ with st.container():
             st.info('Feels Like: ' + str(round(r[2],2)) + ' °C')
             st.info('Humidity: ' + str(round(r[3],2)) + ' %')
 
+st.write("---")
+st.header(":mailbox: Get in Touch With Us")
+
 with st.container():
+    col1, col2 = st.columns([4,2])
+    with col1:
+
+        contact_form = """
+        <form action="https://formsubmit.co/annarhysa13@gmail.com" method="POST">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="text" name="name" placeholder = "Your Name" required>
+        <input type="email" name="email" placeholder = "Your email" required>
+        <textarea name = "message" placeholder = "Your message here"></textarea>
+        <button type="submit">Send</button></form>
+
         
-    st.write("---")
-    st.header(":mailbox: Get in Touch With Us")
-
-    contact_form = """
-    <form action="https://formsubmit.co/annarhysa13@gmail.com" method="POST">
-     <input type="hidden" name="_captcha" value="false">
-     <input type="text" name="name" placeholder = "Your Name" required>
-     <input type="email" name="email" placeholder = "Your email" required>
-     <textarea name = "message" placeholder = "Your message here"></textarea>
-     <button type="submit">Send</button></form>
-
-     
-    """
-    css("style\conatct_form.css")
-    st.markdown(contact_form, unsafe_allow_html = True)
+        """
+        css("style\conatct_form.css")
+        st.markdown(contact_form, unsafe_allow_html = True)
+    
+    with col2:
+        st_lottie(lottie_mail, height = 300, key = "mail")
 
     
         
