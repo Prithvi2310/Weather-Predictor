@@ -12,7 +12,9 @@ url = 'http://api.openweathermap.org/data/2.5/weather?q={}&appid={}'
 
 gif_file = open("design.gif", "rb").read()
 
-
+def css(file_name):
+    with open(file_name) as f:
+        st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html = True)
 
 def getweather(city):
     result = requests.get(url.format(city, api_key))
@@ -88,16 +90,20 @@ with st.container():
 with st.container():
         
     st.write("---")
-    st.header("Get in Touch With US")
+    st.header(":mailbox: Get in Touch With Us")
 
-    with st.form(key="contact_form"):
-        # Add input fields for the user's name, email address, and message
-        name = st.text_input("Name")
-        email = st.text_input("Email")
-        message = st.text_area("Message")
+    contact_form = """
+    <form action="https://formsubmit.co/annarhysa13@gmail.com" method="POST">
+     <input type="hidden" name="_captcha" value="false">
+     <input type="text" name="name" placeholder = "Your Name" required>
+     <input type="email" name="email" placeholder = "Your email" required>
+     <textarea name = "message" placeholder = "Your message here"></textarea>
+     <button type="submit">Send</button></form>
 
-        # Add a submit button to the form
-        submit_button = st.form_submit_button(label="Submit")
+     
+    """
+    css("style\conatct_form.css")
+    st.markdown(contact_form, unsafe_allow_html = True)
 
-        if submit_button:
-            st.write("Your Response has been recorded. We will get back to you shortly")
+    
+        
