@@ -40,9 +40,6 @@ The contributors to this project are <br></br>
 <a href="https://github.com/Prithvi2310/Weather-Predictor/graphs/contributors?from=2023-02-26&to=2023-03-05&type=c">
   <img src="https://contrib.rocks/image?repo=Prithvi2310/Weather-Predictor" />
 </a>
-<a href="https://github.com/Prithvi2310/Weather-Predictor/graphs/contributors?from=2023-02-26&to=2023-03-05&type=c">
-  <img src="https://contrib.rocks/image?repo=muntazir99/bio" />
-</a>
 
 ## 🪪 License
 
