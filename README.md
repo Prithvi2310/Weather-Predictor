@@ -19,11 +19,11 @@ Follow this url to visit our web app:
 <a href = 'https://prithvi2310-weather-predictor-app-3sudp2.streamlit.app'>https://prithvi2310-weather-predictor-app-3sudp2.streamlit.app</a>
 
 ## 📈 Timeline 
-- This project was initiated with a blank repository on 04/03/2023
-- By the end of 04/03/2023 we had small web app running and an idea to implement LSTM with it
-- In the morning of 05/03/2023 we had a LSTM model using keras library but we couldn't integrate it with the web app
-- The model is fully functional with an accuracy of 80%
-- A simple working web app was created by the afternoon of 05/03/2023 with the functionality of fetching the live weather data of the particular city
+|→ This project was initiated with a blank repository on 04/03/2023\
+|→ By the end of 04/03/2023 we had small web app running and an idea to implement LSTM with it\
+|→ In the morning of 05/03/2023 we had a LSTM model using keras library but we couldn't integrate it with the web app\
+|→ The model is fully functional with an accuracy of 80%\
+|→ A simple working web app was created by the afternoon of 05/03/2023 with the functionality of fetching the live weather data of the particular city
 
 ## 🥳 What worked 
  - The app was able to fetch data, more or less, accurately
