@@ -43,6 +43,7 @@ The contributors to this project are <br></br>
 
 ## 🪪 License
 
-The MIT License - [Prithvi Shah](https://github.com/Prithvi2310/). Please have a look at the [LICENSE.md](license.md) for more details.
+The MIT License - [Prithvi Shah](https://github.com/Prithvi2310/)\
+Please have a look at the [LICENSE.md](license.md) for more details.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
