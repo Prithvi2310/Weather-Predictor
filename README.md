@@ -9,9 +9,9 @@ A simple web application to get current weather of the city which is input by th
 
 ## 💡 Key Insights
 
-- This model takes in data such as temperature, precipitation and date
-- On analysis, the machine learning model can identify patterns and trends that can help it make accurate predictions about future weather conditions
-- We will be using a prop dataset from Kaggle with historical Weather data of various datasets which comes from a variety of Sources, such as weather stations, satellites, and radar systems
+→ This model takes in data such as temperature, precipitation and date\
+→ On analysis, the machine learning model can identify patterns and trends that can help it make accurate predictions about future weather conditions\
+→ We will be using a prop dataset from Kaggle with historical Weather data of various datasets which comes from a variety of Sources, such as weather stations, satellites, and radar systems
 
 ## 💯 Outcomes
 Once the model has been trained, it can be used to make predictions about future weather conditions based on current weather data. These predictions can be used by meteorologists, emergency responders, and other professionals to plan for and respond to weather events.<br>
