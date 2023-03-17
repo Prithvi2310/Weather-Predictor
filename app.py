@@ -2,7 +2,7 @@ import streamlit as st
 import requests
 from datetime import datetime, timedelta
 import pandas as pd
-from streamlit_lottie import st_lottie
+
 
 api_key = 'f101202d0d81e93cb1245ad877f53f4a'
 
@@ -12,9 +12,7 @@ url = 'http://api.openweathermap.org/data/2.5/weather?q={}&appid={}'
 
 gif_file = open("design.gif", "rb").read()
 
-def css(file_name):
-    with open(file_name) as f:
-        st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html = True)
+
 
 def getweather(city):
     result = requests.get(url.format(city, api_key))
@@ -43,15 +41,6 @@ def local_css(file_name):
     with open(file_name) as f:
         st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html = True)
 
-def load_lottieurl(url):
-    r = requests.get(url)
-    if r.status_code !=200:
-        return None
-    return r.json()
-
-
-lottie_mail = load_lottieurl("https://assets9.lottiefiles.com/packages/lf20_se3w0ukg.json")
-
 
 #web app
 
@@ -66,8 +55,8 @@ with st.container():
         st.markdown("<h7 style='text-align: left; color: white;'>🟣 On further analysis, this application can help us forecast the future weather data</h1>", unsafe_allow_html=True)
     
         st.subheader("General Instructions " )
-        st.write("1. User must input a valid city name, i.e, there shouldn't be any spelling mistakes")
-        st.write("2. The city name is not case sensetive")
+        st.write("1. User must input a valid city name, i.e, there shouldn't be any grammatical error")
+        st.write("2. The city name is no case sensetive")
         st.write("3. The accuracy of the information predicted in not 100%")
 
         st. write('##')
@@ -96,28 +85,19 @@ with st.container():
             st.info('Feels Like: ' + str(round(r[2],2)) + ' °C')
             st.info('Humidity: ' + str(round(r[3],2)) + ' %')
 
-st.write("---")
-st.header(":mailbox: Get in Touch With Us")
-
 with st.container():
-    col1, col2 = st.columns([4,2])
-    with col1:
-
-        contact_form = """
-        <form action="https://formsubmit.co/annarhysa13@gmail.com" method="POST">
-        <input type="hidden" name="_captcha" value="false">
-        <input type="text" name="name" placeholder = "Your Name" required>
-        <input type="email" name="email" placeholder = "Your email" required>
-        <textarea name = "message" placeholder = "Your message here"></textarea>
-        <button type="submit">Send</button></form>
-
         
-        """
-        css("style\conatct_form.css")
-        st.markdown(contact_form, unsafe_allow_html = True)
-    
-    with col2:
-        st_lottie(lottie_mail, height = 300, key = "mail")
+    st.write("---")
+    st.header("Get in Touch With US")
 
-    
-        
+    with st.form(key="contact_form"):
+        # Add input fields for the user's name, email address, and message
+        name = st.text_input("Name")
+        email = st.text_input("Email")
+        message = st.text_area("Message")
+
+        # Add a submit button to the form
+        submit_button = st.form_submit_button(label="Submit")
+
+        if submit_button:
+            st.write("Your Response has been recorded. We will get back to you shortly")
